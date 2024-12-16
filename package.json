@@ -1,0 +1,33 @@
+{
+  "name": "buishclient",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/joy": "^5.0.0-beta.50",
+    "@mui/material": "^6.1.6",
+    "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
+    "formik": "^2.4.6",
+    "jsonwebtoken": "^9.0.2",
+    "next": "15.0.1",
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-redux": "^9.1.2",
+    "redux-persist": "^6.0.0",
+    "yup": "^1.4.0"
+  },
+  "proxy": "https://buish.onrender.com/",
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
