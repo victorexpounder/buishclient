@@ -1,11 +1,11 @@
 'use client'
 import { Users, GraduationCap, UserCheck } from 'lucide-react'
-import { SearchInput } from "@/components/search-input"
-import { MetricCard } from "@/components/metric-card"
-import { PerformanceChart } from "@/components/performance-chart"
-import { GenderDistribution } from "@/components/gender-distribution"
-import { AttendanceChart } from "@/components/attendance-chart"
-import { StarStudents } from "@/components/star-students"
+import { SearchInput } from "@/Components/search-input"
+import { MetricCard } from "@/Components/metric-card"
+import { PerformanceChart } from "@/Components/performance-chart"
+import { GenderDistribution } from "@/Components/gender-distribution"
+import { AttendanceChart } from "@/Components/attendance-chart"
+import { StarStudents } from "@/Components/star-students"
 import Sidebar from '@/Components/Sidebar'
 import AdminSidebar from '@/Components/AdminSidebar'
 import ProgressSide from '@/Components/ProgressSide'
