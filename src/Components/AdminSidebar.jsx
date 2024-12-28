@@ -5,7 +5,7 @@ import { Chat, Home, Logout, Note, Person2Rounded, Settings } from '@mui/icons-m
 import { Tooltip } from '@mui/material'
 import { logout } from '@/Redux/userSlice'
 import { useDispatch } from 'react-redux'
-const Sidebar = () => {
+const AdminSidebar = () => {
     const dispatch = useDispatch()
   return (
     <div className='w-[80px] rounded-3xl h-screen bg-[var(--main-blue)]  hidden sm:flex flex-col justify-between items-center p-4'>
@@ -14,9 +14,8 @@ const Sidebar = () => {
             <Image src={logo} width={50} height={50} alt='logo'/>
         </div>
         <div className='flex flex-col gap-10 cursor-pointer'>
-            <a href="/"><Home className='text-white'/></a> 
+            <a href="/admin"><Home className='text-white'/></a> 
             <a href="/course"><Note className='text-white'/></a> 
-            <Chat className='text-white'/>
             <Person2Rounded className='text-white'/>
             <Tooltip title='Log Out'>
               <Logout className='text-white' onClick={()=>{dispatch(logout())}} />
@@ -28,4 +27,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default AdminSidebar

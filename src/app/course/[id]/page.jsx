@@ -1,4 +1,5 @@
 'use client'
+import { BottomNav } from '@/Components/ButtonNav'
 import AccordionIndicator from '@/Components/CoursesAccordion'
 import Sidebar from '@/Components/Sidebar'
 import Top from '@/Components/Top'
@@ -43,6 +44,7 @@ const page = () => {
             <AccordionIndicator/>
           </div>
         </div>
+        <BottomNav/>
       </div>
     </ProtectedRoute>
   )

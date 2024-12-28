@@ -9,7 +9,7 @@ import circle4 from '../app/images/circle4.png'
 import { Avatar, CircularProgress } from '@mui/material'
 import { useSelector } from 'react-redux'
 
-const ProgressSide = () => {
+const ProgressSide = ({admin}) => {
   const currentUser = useSelector((state) => state.user.currentUser);
 
   return (
@@ -30,34 +30,35 @@ const ProgressSide = () => {
                 />
 
                 <div>
-                    <p className='font-semibold'>Mr, {currentUser.username}</p>
-                    <p className='text-[#767676] text-[14px]'>Undergraduate </p>
+                    <p className='font-semibold'> {currentUser.username}</p>
+                    <p className='text-[#767676] text-[14px]'> {currentUser.role === 'student'? 'Undergraduate' : 'Admin' }  </p>
                 </div>
             </div>
       </div>
-
-        <div className='' style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
-            <p className='text-[20px] font-semibold p-3'>Progress Tracker</p>
-            <div className='flex md:grid grid-cols-2 gap-4'>
-                <div className='flex flex-col gap-3 items-center justify-center'>
-                    <Image alt='circle' src={circle1} width={100} height={100}/>
-                    <p className='font-semibold max-sm:text-[10px]'>AI</p>
+        {!admin &&
+            <div className='' style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"}}>
+                <p className='text-[20px] font-semibold p-3'>Progress Tracker</p>
+                <div className='flex md:grid grid-cols-2 gap-4'>
+                    <div className='flex flex-col gap-3 items-center justify-center'>
+                        <Image alt='circle' src={circle1} width={100} height={100}/>
+                        <p className='font-semibold max-sm:text-[10px]'>AI</p>
+                    </div>
+                    <div className='flex flex-col gap-3 items-center justify-center'>
+                        <Image alt='circle' src={circle2} width={100} height={100}/>
+                        <p className='font-semibold max-sm:text-[10px]'>HCI</p>
+                    </div>
+                    <div className='flex flex-col gap-3 items-center justify-center'>
+                        <Image alt='circle' src={circle3} width={100} height={100}/>
+                        <p className='font-semibold max-sm:text-[10px]'>Python</p>
+                    </div>
+                    <div className='flex flex-col gap-3 items-center justify-center'>
+                        <Image alt='circle' src={circle1} width={100} height={100}/>
+                        <p className='font-semibold max-sm:text-[10px]'>Research M.</p>
+                    </div>
+                    
                 </div>
-                <div className='flex flex-col gap-3 items-center justify-center'>
-                    <Image alt='circle' src={circle2} width={100} height={100}/>
-                    <p className='font-semibold max-sm:text-[10px]'>HCI</p>
-                </div>
-                <div className='flex flex-col gap-3 items-center justify-center'>
-                    <Image alt='circle' src={circle3} width={100} height={100}/>
-                    <p className='font-semibold max-sm:text-[10px]'>Python</p>
-                </div>
-                <div className='flex flex-col gap-3 items-center justify-center'>
-                    <Image alt='circle' src={circle1} width={100} height={100}/>
-                    <p className='font-semibold max-sm:text-[10px]'>Research M.</p>
-                </div>
-                
             </div>
-        </div>
+        }
     </div>
   )
 }

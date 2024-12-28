@@ -5,11 +5,18 @@ import { useRouter } from 'next/navigation';
 
 const NotProtectedRoute = ({ children }) => {
   const isAuthenticated = useSelector((state) => state.user.currentUser);
+  
+
   const router = useRouter();
 
   useEffect(() => {
     if (isAuthenticated) {
-      router.push('/'); // Redirect to login if not authenticated
+      if(isAuthenticated.role === 'admin')
+      {
+        router.push('/admin') // Redirect to admin if authenticated
+      }else{
+        router.push('/'); // Redirect to home if authenticated
+      }
     }
   }, [isAuthenticated, router]);
 

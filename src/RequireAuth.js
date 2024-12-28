@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useSelector((state) => state.user.currentUser);
   const router = useRouter();
+  
 
   useEffect(() => {
     if (!isAuthenticated) {

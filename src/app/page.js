@@ -1,4 +1,5 @@
 'use client'
+import { BottomNav } from '@/Components/ButtonNav';
 import Popular from '@/Components/Popular';
 import ProgressSide from '@/Components/ProgressSide';
 import Sidebar from '@/Components/Sidebar';
@@ -28,6 +29,7 @@ const dashboard = () => {
             <ProgressSide/>
           </div>
         </div>
+        <BottomNav/>
       </div>
     </ProtectedRoute>
   )

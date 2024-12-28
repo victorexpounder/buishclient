@@ -108,14 +108,14 @@ export default function FullWidthTabs() {
       <TabPanel value={value} index={0} dir={theme.direction} style={{width: '100%'}}>
         <div className='w-full flex max-sm:overflow-scroll md:grid grid-cols-2 gap-4'>
             {studydata.map((datad, index)=>(
-                   <a href={`/course`} key={index}><CourseCard data={datad} /></a> 
+                   <a href={`/course/8888`} key={index}><CourseCard data={datad} /></a> 
                 ))}
         </div>
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
         <div className='w-full flex max-sm:overflow-scroll md:grid grid-cols-2 gap-4'>
             {pracdata.map((datad, index)=>(
-                <a href={`/course`} key={index}><CourseCard data={datad}/></a> 
+                <a href={`/course/8888`} key={index}><CourseCard data={datad}/></a> 
             ))}
         </div>
       </TabPanel>
