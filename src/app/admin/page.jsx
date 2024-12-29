@@ -10,6 +10,7 @@ import Sidebar from '@/Components/Sidebar'
 import AdminSidebar from '@/Components/AdminSidebar'
 import ProgressSide from '@/Components/ProgressSide'
 import ProtectedRoute from '@/RequireAuth'
+import { BottomNav } from '@/Components/ButtonNav'
 
 export default function Dashboard() {
   return (
@@ -47,6 +48,7 @@ export default function Dashboard() {
           </div>
         </div> 
         <ProgressSide admin={true}/>
+        <BottomNav />
       </div>
     </ProtectedRoute>
     

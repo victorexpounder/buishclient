@@ -1,17 +1,19 @@
 'use client'
-
 import * as React from 'react'
-import { Home, MenuBook, Message, Person } from '@mui/icons-material'
+import { Home, Logout, MenuBook, Message, Person } from '@mui/icons-material'
+import { logout } from '@/Redux/userSlice'
+import { useDispatch } from 'react-redux';
 
-const navItems = [
-  { icon: <Home />, label: 'HOME', href: '#' },
-  { icon: <MenuBook />, label: 'MY COURSES', href: '#' },
-  { icon: <Message />, label: 'INBOX', href: '#' },
-  { icon: <Person />, label: 'PROFILE', href: '#' },
-]
 
-export function BottomNav() {
-  const [active, setActive] = React.useState('home')
+export function BottomNav({admin}) {
+  const [active, setActive] = React.useState('home');
+  const dispatch = useDispatch()
+  const navItems = [
+    { icon: <Home />, label: 'HOME',  href: admin? '/' : '/admin'},
+    { icon: <MenuBook />, label: 'MY COURSES', href: '#' },
+    { icon: <Person />, label: 'PROFILE', href: '#' },
+    { icon: <Logout />, label: 'LOGOUT', href: '#' },
+  ]
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 sm:hidden ">
@@ -29,6 +31,7 @@ export function BottomNav() {
                   ? 'text-blue-500'
                   : 'text-gray-500'
               }`}
+              onClick={item.label === 'LOGOUT'? () => dispatch(logout()) : ''}
             >
               {item.icon}
             </div>
