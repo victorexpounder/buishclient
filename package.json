@@ -46,6 +46,9 @@
     "@mui/joy": {
       "@types/react": "19.0.2"
     },
+    "@mui/joy@5.0.0-beta.50": {
+      "@types/react": "19.0.2"
+    },
     "@mui/base": {
       "@types/react": "19.0.2"
     }
