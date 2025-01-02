@@ -42,6 +42,14 @@
     "yup": "^1.4.0",
     "zod": "^3.24.1"
   },
+  "overrides": {
+    "@mui/joy": {
+      "@types/react": "19.0.2"
+    },
+    "@mui/base": {
+      "@types/react": "19.0.2"
+    }
+  },
   "proxy": "https://buish.onrender.com/",
   "devDependencies": {
     "postcss": "^8",
