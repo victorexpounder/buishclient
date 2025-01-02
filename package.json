@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && npx tailwindcss -o build.css --minify",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install --force"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -41,17 +42,6 @@
     "tailwindcss-animate": "^1.0.7",
     "yup": "^1.4.0",
     "zod": "^3.24.1"
-  },
-  "overrides": {
-    "@mui/joy": {
-      "@types/react": "19.0.2"
-    },
-    "@mui/joy@5.0.0-beta.50": {
-      "@types/react": "19.0.2"
-    },
-    "@mui/base": {
-      "@types/react": "19.0.2"
-    }
   },
   "proxy": "https://buish.onrender.com/",
   "devDependencies": {
