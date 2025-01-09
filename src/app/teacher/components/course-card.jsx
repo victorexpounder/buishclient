@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bookmark } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "Components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader } from "@/Components/ui/card"
 import { Button } from "@/Components/ui/button"
 
 export function CourseCard({ category, title, length, rating, students, image }) {
