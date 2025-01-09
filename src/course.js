@@ -11,8 +11,8 @@ export const addCourse = async(values, token) =>{
     return res.data
     
 }
-export const getUserCourses = async(values, token) =>{
-    const res = await axios.get("https://buish.onrender.com/course/create_course", values, {
+export const getUserCourses = async(token) =>{
+    const res = await axios.get("https://buish.onrender.com/user/teacher/courses/my_courses", {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`

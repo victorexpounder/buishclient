@@ -22,7 +22,7 @@ const dashboard = () => {
           <div className='h-screen lg:overflow-scroll  py-3 flex flex-col flex-[2.5] lg:pl-10 max-lg:px-5 gap-6'>
             <Top currentUser={currentUser}/>
 
-            <FullWidthTabs/>
+            <Popular />
             
           </div>
           <div className='max-sm:px-4'>

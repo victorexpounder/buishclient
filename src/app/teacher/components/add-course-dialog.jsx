@@ -19,14 +19,19 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { addCourse } from '@/course'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { Snackbar } from '@mui/material'
+import { addToCourses, fetchLoading } from '@/Redux/coursesSlice'
 
 
 
 export function AddCourseDialog({ open, onOpenChange }) {
 
   const currentUser = useSelector((state) => state.user.currentUser);
-
+  const loading = useSelector((state) => state.courses.loading);
+  const error = useSelector((state) => state.courses.error);
+  const [snackOpen, setSnackOpen] = React.useState(false)
+  const dispatch = useDispatch()
   const form = useForm({
     defaultValues: {
       category: "",
@@ -39,11 +44,14 @@ export function AddCourseDialog({ open, onOpenChange }) {
   async function onSubmit(values) {
     // Handle form submission
     try {
+      dispatch(fetchLoading())
       const details = await addCourse(values, currentUser.access_token)
       console.log(details)
-      message
+      dispatch(addToCourses(details.courses))
+      setSnackOpen(true)
     } catch (error) {
       console.log(error)
+      dispatch(addError(error))
     }
    
     onOpenChange(false)
@@ -110,11 +118,16 @@ export function AddCourseDialog({ open, onOpenChange }) {
               )}
             />
             <Button type="submit" className="w-full">
+              { 
+                loading ? "Adding Course..." : "Add Course"
+              }
               Add Course
             </Button>
           </form>
         </Form>
       </DialogContent>
+
+      <Snackbar open={snackOpen} autoHideDuration={6000} onClose={()=>setSnackOpen(false)} message="Course added successfully" />
     </Dialog>
   )
 }

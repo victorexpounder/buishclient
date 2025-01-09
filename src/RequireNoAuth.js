@@ -14,8 +14,10 @@ const NotProtectedRoute = ({ children }) => {
       if(isAuthenticated.role === 'admin')
       {
         router.push('/admin') // Redirect to admin if authenticated
+      }else if(isAuthenticated.role === 'teacher'){
+        router.push('/teacher'); // Redirect to home if authenticated
       }else{
-        router.push('/'); // Redirect to home if authenticated
+        router.push('/')
       }
     }
   }, [isAuthenticated, router]);
