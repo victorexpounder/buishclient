@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build && npx tailwindcss -o build.css --minify",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npm install --force"
+    "lint": "next lint"
+   
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
