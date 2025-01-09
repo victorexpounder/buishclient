@@ -9,7 +9,7 @@ export function BottomNav({admin}) {
   const [active, setActive] = React.useState('home');
   const dispatch = useDispatch()
   const navItems = [
-    { icon: <Home />, label: 'HOME',  href: admin? '/' : '/admin'},
+    { icon: <Home />, label: 'HOME',  href: admin? '/admin' : '/'},
     { icon: <MenuBook />, label: 'MY COURSES', href: '#' },
     { icon: <Person />, label: 'PROFILE', href: '#' },
     { icon: <Logout />, label: 'LOGOUT', href: '#' },
