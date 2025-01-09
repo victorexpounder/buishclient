@@ -8,7 +8,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
+} from "@/Components/ui/dialog"
 import {
   Form,
   FormControl,
@@ -16,11 +16,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+} from "@/Components/ui/form"
+import { Input } from "@/Components/ui/input"
+import { Button } from "@/Components/ui/button"
+import { Textarea } from "@/Components/ui/textarea"
+import { RadioGroup, RadioGroupItem } from "@/Components/ui/radio-group"
 
 export function AddQuizDialog({ open, onOpenChange }) {
   const form = useForm({

@@ -7,7 +7,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
+} from "@/Components/ui/dialog"
 import {
   Form,
   FormControl,
@@ -15,9 +15,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+} from "@/Components/ui/form"
+import { Input } from "@/Components/ui/input"
+import { Button } from "@/Components/ui/button"
 import { addCourse } from '@/course'
 import { useDispatch, useSelector } from 'react-redux'
 import { Snackbar } from '@mui/material'
