@@ -2,12 +2,12 @@
 
 import React, { useState } from "react"
 import { Plus } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { CourseList } from "./components/course-list"
-import { QuizList } from "./components/quiz-list"
-import { AddCourseDialog } from "./components/add-course-dialog"
-import { AddQuizDialog } from "./components/add-quiz-dialog"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs"
+import { Button } from "@/Components/ui/button"
+import { CourseList } from "./Components/course-list"
+import { QuizList } from "./Components/quiz-list"
+import { AddCourseDialog } from "./Components/add-course-dialog"
+import { AddQuizDialog } from "./Components/add-quiz-dialog"
 
 export default function TeacherDashboard() {
   const [addCourseOpen, setAddCourseOpen] = useState(false)
